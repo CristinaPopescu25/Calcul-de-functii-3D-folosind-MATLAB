@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+:root {
+    /* culori */
+    --white-color: #fff;
+    --dark-color: #252525;
+    --primary-color: #3b141c;
+    --secondary-color: #f3961c;
+    --light-pink-color: #faf4f5;
+    --medium-gray-color: #ccc;
+
+    /* marime font */
+    --font-size-s: 0.9rem;
+    --font-size-n: 1rem;
+    --font-size-m: 1.12rem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.3rem;
+
+    /* grosime font */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibpld: 600;
+    --font-weight-bold: 700;
+
+    /* margini */
+    --border-radius-s: 8px;
+    --border-radius-m: 30px;
+    --border-radius-circle: 50%;
+
+    --size-max-width:1300px;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+/* stylings for whole site */
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;  
+}
+
+img {
+    width: 100%;
+}
+
+.section-content {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: var(--size-max-width);
+
+}
+/* bara de navigatie */
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    background: var(--primary-color);
+}
+
+header .navbar {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.navbar .nav-logo .logo-text {
+    color: var(--white-color);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibpld);
+}
+
+.navbar .nav-menu {
+    display: flex;
+    gap: 10px;
+
+}
+
+.navbar .nav-menu .nav-link {
+    padding: 10px 18px;
+     color: var(--white-color);
+     font-size: var(--font-size-m);
+     border-radius: var(--border-radius-m);
+     transition: 0.3s ease;
+   
+}
+
+.navbar .nav-menu .nav-link:hover {
+    color: var(--primary-color);
+    background: var(--secondary-color);
+}
+
+.hero-section {
+    min-height: 100vh;
+    background: var(--primary-color);
+}
+
+.hero-section .section-content {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--white-color);
+    justify-content: space-between;
+}
+
+.hero-section .hero-details .title {
+    font-size: var(--font-size-xxl);
+    color: var(--secondary-color);
+    font-family: "Miniver", sans-serif;
+
+}
+
+.hero-section .hero-details .subtitle {
+    margin-top: 8px;
+    max-width: 70%;
+    font-size: var(--font-weight-semibpld);
+}
+
+.hero-section .hero-details .description {
+    max-width: 70%;
+    margin: 24px 0 40px;
+    font-size: var(--font-size-m);
+}
+
+.hero-section .hero-details .buttoms {
+    display: flex;
+    gap: 23px;
+}
+
+.hero-section .hero-image-wrapper {
+    width: 1000px; 
+}
+
+.hero-section .hero-image-wrapper {
+    max-width: 800px;
+    margin-right: 60px;
+
+}
+
+.hero-section .hero-image-wrapper .hero-image {
+    width: 100%;
+    height: auto;
+}
+ 
+.about-section {
+    padding: 120px 0;
+    background: var(--light-pink-color);
+}
+
+.about-section .section-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-section .about-image-wrapper .about-image {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: var(--border-radius-circle);
+}
+
+/* Stilizare generala pentru titluri de sectiuni */
+.section-title {
+    font-size: var(--font-size-xxl);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Linie sub titlu */
+.section-title::after {
+    content: "";
+    width: 50px;
+    height: 4px;
+    background: var(--secondary-color);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: var(--border-radius-s);
+}
+
+/* Sectiunea Arhitectura */
+.architecture-section {
+    padding: 100px 0;
+    background: var(--white-color);
+}
+
+.architecture-section .section-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse; /* Imaginea în dreapta, textul în stânga */
+}
+
+.architecture-section .architecture-image {
+    width: 400px;
+    height: auto;
+    border-radius: var(--border-radius-s);
+}
+
+/* Titlu modern cu linie sub el */
+.architecture-section .section-title {
+    font-size: var(--font-size-xxl);
+    font-weight: var(--font-weight-bold);
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.architecture-section .section-title::after {
+    content: "";
+    width: 50px;
+    height: 4px;
+    background: var(--secondary-color);
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    border-radius: var(--border-radius-s);
+}
+
+
+/* Sectiunea Obiective */
+.objectives-section {
+    padding: 100px 0;
+    background: var(--light-pink-color);
+    text-align: center;
+}
+.objectives-section .objectives-list {
+    list-style-type: none;
+    padding: 0;
+}
+.objectives-section .objectives-list li {
+    font-size: var(--font-size-m);
+    padding: 10px;
+    position: relative;
+}
+
+/* Stil pentru fiecare obiectiv */
+.objectives-section .objectives-list li::before {
+    content: "✔";
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Sectiunea Galerie */
+.gallery-section {
+    padding: 100px 0;
+    background: var(--white-color);
+    text-align: center;
+}
+.gallery-section .gallery-grid {
+    display: flex;
+    justify-content: center;
+    gap: 300px;
+    align-items: center;
+    margin-top: 40px;
+}
+.gallery-section .gallery-item {
+    text-align: center;
+}
+.gallery-section .gallery-label {
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.gallery-section .gallery-image {
+    width: 400px;
+    height: auto;
+    border-radius: var(--border-radius-s);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 15);
+    transition: transform 0.3s ease-in-out;
+}
+.gallery-section .gallery-image:hover {
+    transform: scale(1.1);
+}
+
+
+/* Modal/Lightbox styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90vh;
+    position: relative;
+}
+
+.modal-image {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: var(--white-color);
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.gallery-item {
+    position: relative;
+    cursor: pointer;
+}
+
+.zoom-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--white-color);
+    padding: 10px 20px;
+    border-radius: var(--border-radius-s);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .zoom-popup {
+    opacity: 1;
+}
